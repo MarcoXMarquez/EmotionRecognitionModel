@@ -9,6 +9,10 @@ def get_loaders(data_dir, batch_size=32):
         transforms.ToTensor(),
     ])
 
-    dataset = datasets.ImageFolder(data_dir, transform=transform)
-    loader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
-    return loader, dataset.classes
+    train_dataset = datasets.ImageFolder(root=f"{data_dir}/train", transform=transform)
+    val_dataset = datasets.ImageFolder(root=f"{data_dir}/val", transform=transform)
+
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+
+    return train_loader, val_loader, train_dataset.classes
