@@ -4,7 +4,7 @@ from PIL import Image, ImageTk, ImageDraw
 import cv2
 import torch
 from torchvision import transforms
-from models.emotion_cnn import EmotionCNN
+from models.model import EmotionCNN
 
 model = EmotionCNN()
 model.load_state_dict(torch.load("emotion_model.pth", weights_only=True))
