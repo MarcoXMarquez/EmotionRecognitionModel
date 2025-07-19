@@ -13,10 +13,6 @@ Proyecto de reconocimiento de emociones faciales usando una CNN personalizada en
 - [🧪 Evaluación](#evaluación)
 - [🔍 Inferencia](#inferencia)
 - [🖼️ Visualización](#visualización)
-- [📦 Distribución](#distribución)
-- [📜 Licencia](#licencia)
-- [📬 Autor](#autor)
-
 ---
 
 ## 🔧 Requisitos
